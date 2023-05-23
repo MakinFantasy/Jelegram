@@ -32,25 +32,20 @@ public class ServerThread extends Thread {
             while(true) {
                 String outputString = input.readLine();
                 //if user types exit command
-                if(outputString.equals("exit")) {
+                if(outputString.equals("/q")) {
                     break;
                 }
                 printToALlClients(outputString);
                 //output.println("Server says " + outputString);
                 System.out.println("Server received " + outputString);
-
             }
-
-
         } catch (Exception e) {
             System.out.println("Error occured " +e.getStackTrace());
         }
     }
-
     private void printToALlClients(String outputString) {
         for( ServerThread sT: threadList) {
             sT.output.println(outputString);
         }
-
     }
 }

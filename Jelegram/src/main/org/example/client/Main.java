@@ -37,7 +37,7 @@ public class Main {
                     userInput = scanner.nextLine();
                     clientName = userInput;
                     output.println(userInput);
-                    if (userInput.equals("exit")) {
+                    if (userInput.equals("/q")) {
                         break;
                     }
                 }
@@ -46,13 +46,13 @@ public class Main {
                     System.out.println(message);
                     userInput = scanner.nextLine();
                     output.println(message + " " + userInput);
-                    if (userInput.equals("exit")) {
+                    if (userInput.equals("/q")) {
                         //reading the input from server
                         break;
                     }
                 }
 
-            } while (!userInput.equals("exit"));
+            } while (!userInput.equals("/q"));
 
 
 

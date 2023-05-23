@@ -19,11 +19,9 @@ public class ClientRunnable implements Runnable {
     }
     @Override
     public void run() {
-
         try {
             while(true) {
                 String response = input.readLine();
-                System.out.println(response);
             }
         } catch (IOException e) {
             e.printStackTrace();
